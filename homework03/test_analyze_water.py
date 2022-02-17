@@ -18,10 +18,10 @@ def test_calculate_turbidity():
     assert isinstance(calculate_turbidity(data['info'], 'cali', 'detector', a), float) == True
 
 def test_calculate_turbidity_exceptions():
-     with pytest.raises(KeyError):
-         calculate_turbidity(data['info']=[{'cal': 1, 'detecto': 2}], 'cali', 'detector', a)
-     with pytest.raises(ValueError):
-         calculate_turbidity(data['info'], 'cali', 'detector', c)
+    with pytest.raises(IndexError):
+        calculate_turbidity( [ {'cali' : 2, 'detector' : 3} ], 'cali',' detect', b)
+    with pytest.raises(NameError):
+        calculate_turbidiy( [ {'cali' : 1, 'detector' : 2} ], 'cali', 'detector', a)
 
 def test_calculate_time():
     assert calculate_time(3) == 54.37945872310939
@@ -29,7 +29,7 @@ def test_calculate_time():
     assert isinstance(calculate_time(4), float) == True
 
 def test_calculate_time_exceptions():
-    with pytest.raises(ValueError):
-        calculate_time('a')
-    with pytest.raises(KeyError):
-        calculate_time([{'a': 1}]
+    with pytest.raises(TypeError):
+        calculate_time([ { 'cali' : 1}, 1 ])
+    with pytest.raises(NameError):
+        calculate_tim([ {'cali' : 1, 'detector' : 2} ], 1)
