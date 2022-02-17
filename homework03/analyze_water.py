@@ -27,7 +27,7 @@ def calculate_turbidity(a_list_of_dicts: List[dict], cali: str, detector: str, i
     return(T)
 
 
-def calculate_time(T: float) -> float::
+def calculate_time(T: float) -> float:
     """
     Given the value of current turbidity I compute the value of time and checks the turbidity against
     the threshold, then prints out the information found.
