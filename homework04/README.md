@@ -8,14 +8,16 @@ The analysis script was improved in its output structure, were the information i
 sanity checks that make sure the code works correctly with different data samples. Lastly is the Docker file which contains the commands
 normally inputted into the command line, but it executes them within this file as a shortcut.
 ## Instructions
-1. Pulling information from another person docker profile is essential to sharing information, in this situation we will be pulling my Docker
+#### 1)
+Pulling information from another person docker profile is essential to sharing information, in this situation we will be pulling my Docker
 conatiner. This will allow access the scripts and data I have and it will allow for the input of your own data as well, computing the script and
 testing itself.
 ```BASH
 $ docker pull jbolivar101/ml_data_analysis:hw04
 ```
 
-2. In order to build an image we must first have a Dockerfile containing `FROM`, `RUN`,`COPY`, and `ENV PATH` commands appropriate to the
+#### 2)
+In order to build an image we must first have a Dockerfile containing `FROM`, `RUN`,`COPY`, and `ENV PATH` commands appropriate to the
 files you want to upload. In order to build the image we must do the following,
 ```BASH
 $ docker build -t jbolivar101/ml_data_analysis:hw04 .
@@ -53,7 +55,8 @@ Successfully built a8b717bde52c
 Successfully tagged jbolivar101/ml_data_analysis:hw04
 ``` 
 
-3. Running a container requires access to the profile so one must be logged in, then input the run command below, and finally call upon
+#### 3)
+Running a container requires access to the profile so one must be logged in, then input the run command below, and finally call upon
 the script and data file within the container. It should look like:
 ```BASH
 $ docker login
@@ -95,7 +98,8 @@ The class Eucrite-mmict was found 1 times
 The class CV3 was found 1 times
 ```
 
-4. To use local data in this example we must first download it(it can be any link you want). This can also be run and use files locally,
+#### 4)
+To use local data in this example we must first download it(it can be any link you want). This can also be run and use files locally,
 while running scripts from the container. Similar to the last step we must be logged in, then execute the following command that is all in one:
 ```BASH
 $ wget https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json
@@ -127,7 +131,8 @@ The class EH4 was found 22 times
 The class H5 was found 26 times
 ```
 
-5. To run the unit test from the container we must run and call it from within the container, which is then accessed within the `code` folder:
+#### 5)
+To run the unit test from the container we must run and call it from within the container, which is then accessed within the `code` folder:
 ```BASH
 $ docker run --rm -it -v $PWD:/data jbolivar101/ml_data_analysis:hw04 /bin/bash
 
