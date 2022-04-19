@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hw06-flask-test-service
+spec:
+  type: ClusterIP
+  selector:
+    app: hw06-test-flask
+  ports:
+  - name: hw06-test
+    port: 5000
+    targetPort: 5000

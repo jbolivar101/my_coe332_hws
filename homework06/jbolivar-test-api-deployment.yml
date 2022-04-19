@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw06-test-flask
+  labels:
+    app: hw06-test-flask
+    env: test
+    username: jbolivar
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hw06-jbolivar-test-flask
+  template:
+    metadata:
+      labels:
+        app: hw06-jbolivar-test-flask
+        env: test
+        username: jbolivar
+    spec:
+      containers:
+        - name: hw06-test-flask
+          imagePullPolicy: Always
+          image: jbolivar101/k8s:latest
+          command: ['python3', 'core.py']
+          ports:
+          - name: http
+            containerPort: 5000
