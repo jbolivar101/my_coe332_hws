@@ -1,3 +1,3 @@
 # COE 332 HOMEWORK
-This is a text file explaining that this repository contains a folder with the first homework,
-I am including another text file and two python programs within it.
+## Spring 2022
+Contains homework folders that may include work scripts, yml files, dockerfiles, README, etc.
