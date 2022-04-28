@@ -1,14 +1,14 @@
 # ISS FLOW
-##Overview
+## Overview
 Simplifying a coding project to a flowchart allows for the user to read and understand what the scripts are actually doing and what paths are taken. It is extremely helpful when sharing a project with others especially with users who are not sure how navigate through the file.
-##Files
+## Files
 The only files included are the README and the image of the flowchart, I will also be including the link to the ISS_Positioning repository which this flowchart is based on. It goes more in depth and explains the code there. Choose either:
 ```BASH
 git pull git@github.com:jbolivar101/ISS_Positioning.git
 
 git pull https://github.com/jbolivar101/ISS_Positioning.git
 ```
-##Image
+## Image
 #### 1)
 The flowchart follows the path of the flask as it tries to gather the information from the given data set.
 #### 2)
