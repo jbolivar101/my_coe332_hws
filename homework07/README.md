@@ -9,6 +9,7 @@ git pull git@github.com:jbolivar101/ISS_Positioning.git
 git pull https://github.com/jbolivar101/ISS_Positioning.git
 ```
 ## Image
+![image](https://user-images.githubusercontent.com/77854904/165704983-a2794049-4a14-41f2-a8e3-76c764b9e1a7.png)
 #### 1)
 The flowchart follows the path of the flask as it tries to gather the information from the given data set.
 #### 2)
