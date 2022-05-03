@@ -14,10 +14,27 @@ work with different situations and how it will act if it fails. We have 5 unit t
 
 
 ## Instructions
-You can download the list by opening the link `https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json` then copying it and pasting it after the command wget inside the folder. After this you can execute the code using python3 and finding the most current 
-turbidity data available, as the site updates. The output will provide the average turbidity of the
-5 most recent samples, wheter the water is safe, and the time it takes to decay. The unit test can
-be run with pytest and it will either pass or fail depending on the actual tests provided and if 
-the data matches the functions.
+You can download the list by pasting into your command line `wget https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json`. After this you can execute the code using python3 and finding the most current 
+turbidity data available, as the site updates.
+```BASH
+python3 analyze_water.py
 
+pytest
+```
+The output will provide the average turbidity of the 5 most recent samples, wheter the water is safe, and the time it takes to decay. The unit test can be run with pytest and it will either pass or fail depending on the actual tests provided and if the data matches the functions.
+Respectively:
+```BASH
+Average turbidity based on most recent five measurements = 1.1621637999999999 NTU
+WARNING: Turbidity is above threshold for safe use
+Minimum time required to return below a safe threshold = 0 hours
+```
+```BASH
+================================================= test session starts ==================================================
+platform linux -- Python 3.6.8, pytest-7.0.0, pluggy-1.0.0
+rootdir: /home/jbolivar/Spring2022coe/my_coe332_hws/homework03
+collected 4 items
 
+test_analyze_water.py ....                                                                                       [100%]
+
+================================================== 4 passed in 0.02s ===================================================
+```
